@@ -1,0 +1,23 @@
+{
+  "name": "lagou-e-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/847225523/lagou-e-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/847225523/lagou-e-task/issues"
+  },
+  "homepage": "https://github.com/847225523/lagou-e-task#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
