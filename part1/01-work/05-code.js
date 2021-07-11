@@ -79,6 +79,20 @@ class myPromise{
         })
         return promise2
     }
+    finally(callback){
+        return this.then((value)=>{
+            return myPromise.resolve(callback()).then(()=>value)
+            // callback()
+            // return value
+        },(reason)=>{
+            return myPromise.resolve(callback()).then(()=>{throw reason})
+            // callback()
+            // throw reason
+        })
+    }
+    catch(failCallback){
+        return this.then(undefined,failCallback)
+    }
     static all(array){
         let result=[];
         let index=0;
@@ -112,6 +126,7 @@ class myPromise{
             return new myPromise(reslove=>reslove(value))
         }
     }
+
 }
 function resolvePromise(promise2,x,resolve,reject){
     if(promise2===x){

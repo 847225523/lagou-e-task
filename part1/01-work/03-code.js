@@ -60,7 +60,7 @@ console.log( isLastInStock(cars) )  // 最终返回 true
 // 1.实现 firstName 函数
 
 // 2.打印测试
-const isLastInStock=fp.flowRight(fp.prop('name'),fp.first)
+const firstName=fp.flowRight(fp.prop('name'),fp.first)
 console.log( firstName(cars) )  // 最终返回 Ferrari FF (第一个 car 的 name) 
 
 

@@ -13,6 +13,7 @@
   }, 10)
 */
 
+
 var promise=new Promise((reslove,reject)=>{
     setTimeout(()=>{
         reslove('hello lagou I ♥ U')
@@ -24,3 +25,13 @@ var promise=new Promise((reslove,reject)=>{
       return value
   }
 )
+
+let p=(val)=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve(val)
+    },10)
+  })
+}
+p('hello').then(val=>p(val+'lagou'))
+.then(val=>p(val+'I ♥ U')).then(val=>console.log(val))
