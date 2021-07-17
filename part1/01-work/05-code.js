@@ -110,7 +110,7 @@ class myPromise{
                     current.then(value=>{
                         addData(i,value)
                     },reason=>{
-                        addData(i,reason)
+                        reject(reason)
                     })
                 }else{
                     addData(i,array[i])

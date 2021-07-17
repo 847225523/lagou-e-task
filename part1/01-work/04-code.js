@@ -11,7 +11,7 @@ const { Maybe, Container } = require('./support')
 let maybe = Maybe.of([5, 6, 1])
 // 2.实现 ex1 函数
 let ex1=function(array){
-  return fp.map(fp.add(x,x+1),array)
+  return fp.map(fp.add(1),array)
 }
 // 3.调用测试
 console.log( maybe.map(ex1) )  // Maybe { _value: [ 6, 7, 2 ] }
@@ -45,7 +45,7 @@ let user = { id: 2, name: 'Albert'}
 
 // 1.实现 ex3
 let ex3=function(){
-  return fp.first(safeProp(user))
+  return fp.first(safeProp(user)('name'))
 }
 // 2.测试打印
 console.log( ex3() ) // Maybe { _value: 'A' }
